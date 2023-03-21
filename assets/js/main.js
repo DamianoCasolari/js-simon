@@ -22,25 +22,23 @@ btnEl.addEventListener("click", function () {
     //hide the button and show the container
     btnEl.classList.add("d-none")
     containerCounter.classList.remove("d-none");
-    // correct answer counter reset
+    // reset every element
     points_on_five_number = 0;
     randomNumbers.splice(0,5);
     timerEl.innerHTML = 5;
-    console.log(points_on_five_number);
     containerNumber.innerHTML = "";
     // crea 5 numeri randomm 
     for (let index = 0; index < 5; index++) {
         const singleRandomNumber = Math.floor(Math.random() * 100) + 1;
         containerNumber.innerHTML += singleRandomNumber + " ";
         randomNumbers.push(singleRandomNumber)
-        // console.log(randomNumbers);
     }
     timerFunction();
     setTimeout(startCountdown, 5000);
 })
 
 
-// add check correct answer to click 
+// check that the numbers entered are correct
 submitEl.addEventListener("click", function (e) {
     e.preventDefault();
     for (let index = 0; index < randomNumbers.length; index++) {
@@ -68,7 +66,8 @@ submitEl.addEventListener("click", function (e) {
 })
 
 
-// FUNCTION  
+
+// -------------FUNCTION---------------  
 
 function startCountdown() {
     containerFirstPart.classList.add("d-none");
@@ -81,7 +80,6 @@ function timerFunction() {
     const timerFunction = setInterval(function () {
         timeOfTimer--;
         timerEl.innerHTML = timeOfTimer;
-        //    console.log(timeOfTimer);
         if (timeOfTimer <= 0) {
             clearInterval(timerFunction);
         }

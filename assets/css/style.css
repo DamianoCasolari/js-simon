@@ -20,6 +20,7 @@ section {
     font-size: 60px;
     flex-direction: column;
     padding: 30px;
+    max-height: 100%;
     
 }
 
