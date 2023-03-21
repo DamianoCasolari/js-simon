@@ -5,6 +5,8 @@ section {
     background-size: cover;
 }
 
+/* Container pre-game  */
+
 .container_random {
     color: white;
     width: 40%;
@@ -18,20 +20,35 @@ section {
     font-size: 60px;
     flex-direction: column;
     padding: 30px;
+    
+}
+
+
+/* button start game selector */
+
+.container_random button{
+    transition-duration: 0.5s;
+
+}
+
+.container_random button:hover {
+   transform: scale(1.1) !important; 
 }
 
 .number_random {
     word-spacing: 50px;
     margin: 30px 0;
-    
+
 }
 
+
+/* MEDIA QUERY  */
 
 @media screen and (max-width:1400px) {
     .number_random {
         word-spacing: 10px;
-        
-        
+
+
     }
-    
+
 }
