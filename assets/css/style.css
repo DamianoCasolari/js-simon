@@ -41,6 +41,10 @@ section {
 
 }
 
+/* Level  */
+.level, .forgot {
+    font-family: 'Fasthand', cursive;
+}
 
 /* MEDIA QUERY  */
 

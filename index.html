@@ -30,32 +30,34 @@
             <div class="card position-absolute w-100 h-100"> -->
         <div class="container_random">
             <div>
-                <button class="bg-transparent text-white rounded-3 display-4 p-3">Inizia il gioco</button>
+                <button class="bg-transparent text-white border-0 display-4 p-3">Inizia il gioco</button>
             </div>
             <div class="container_counter d-none">
                 <h1 class="display-4">Remember this numbers:</h1>
                 <div class="number_random text-warning"></div>
                 <h2 class="text_counter">They will disappear into</h2>
-                <div class="timer text-danger">15</div>
+                <div class="timer text-danger">5</div>
             </div>
         </div>
         <div class="container_form d-none d-flex flex-column align-items-center justify-content-center">
 
             <form class="d-flex flex-column gap-3 align-items-center justify-content-center mx-3 ">
-                <input type="number">
-                <input type="number">
-                <input type="number">
-                <input type="number">
-                <input type="number">
-                <input type="submit" value="Check">
+                <input type="number" id="0">
+                <input type="number" id="1">
+                <input type="number" id="2">
+                <input type="number" id="3">
+                <input type="number" id="4">
+                <input type="submit" class="btn btn-dark text-center" value="Check">
             </form>
         </div>
         <div style="width:18rem;" class="text-center">
             <div class="card-body text-white">
                 <h1 class="card-title h1">Check your Number</h1>
-                <h2 class="card-subtitle mb-2 fw-light ">Level</h2>
-                <h2 class="card-body mb-2 text-danger display-1 fw-semibold">0</h2>
-
+                <div>
+                    <h2 class="level_container card-subtitle mb-2 fw-light">Level</h2>
+                    <h2 class="level card-body mb-2 text-danger display-1 fw-semibold">0</h2>
+                    <h2 class="forgot d-none card-body mb-2 text-danger display-1 fw-semibold"></h2>
+                </div>
             </div>
         </div>
     </section>
