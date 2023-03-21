@@ -4,6 +4,7 @@ const containerCounter = document.querySelector(".container_counter")
 const containerFirstPart = document.querySelector(".container_random")
 const containerNumber = document.querySelector(".number_random")
 const containerFormEl = document.querySelector(".container_form")
+const timerEl = document.querySelector(".timer")
 const randomNumbers = []
 
 // I start with a click on my start game button 
@@ -18,11 +19,26 @@ for (let index = 0; index < 5; index++) {
     randomNumbers.push(singleRandomNumber)
     console.log(randomNumbers);
 }
-setInterval(startCountdown,5000 )
+timerFunction();
+setTimeout(startCountdown,15000 );
 })
+
 
 function startCountdown() {
     containerFirstPart.classList.add("d-none");
     containerFormEl.classList.remove("d-none");
 
+}
+
+function timerFunction() {
+    let timeOfTimer = 15;
+    const timerFunction = setInterval(function() { 
+       timeOfTimer--;
+       timerEl.innerHTML = timeOfTimer; 
+       console.log(timeOfTimer);
+       if (timeOfTimer <= 0) {
+        clearInterval(timerFunction);
+      }
+
+    },1000 ) 
 }
