@@ -5,6 +5,7 @@ const containerFirstPart = document.querySelector(".container_random")
 const containerNumber = document.querySelector(".number_random")
 const containerFormEl = document.querySelector(".container_form")
 const timerEl = document.querySelector(".timer")
+const formEl = document.querySelector("form")
 const submitEl = document.querySelector("input[type='submit']")
 const inputArray = document.querySelectorAll("input[type='number']")
 const levelContainerEl = document.querySelector(".level_container")
@@ -63,6 +64,7 @@ submitEl.addEventListener("click", function (e) {
         }
         checkLevel(points_on_five_number)
     }
+    formEl.reset();
 })
 
 
