@@ -54,7 +54,7 @@ submitEl.addEventListener("click", function (e) {
             forgotEl.innerHTML += singleRandomNumber + " ";
             if (index == 4) {
                 setTimeout (() => {
-                   if (confirm("Vuoi rigiocare?")) {
+                   if (confirm("Do you want to play again?")) {
                     location.reload();
                    }
                 }, 1000)
@@ -95,6 +95,6 @@ function checkLevel(points) {
         containerCounter.classList.add("d-none");
         containerFirstPart.classList.remove("d-none");
         containerFormEl.classList.add("d-none");
-        btnEl.innerHTML ="Nuovo livello"
+        btnEl.innerHTML ="New Level"
     }
 }
